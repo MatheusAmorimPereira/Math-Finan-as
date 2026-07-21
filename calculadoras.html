@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadoras Financeiras - Math Finanças</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <span class="logo-math">MATH</span><span class="logo-financas">FINANÇAS</span>
+        </div>
+       <ul class="nav-links">
+    <li><a href="index.html">Início</a></li>
+    <li><a href="calculadoras.html">Calculadoras</a></li>
+    <li><a href="contato.html">Contato</a></li>
+</ul>
+        <a href="https://chat.whatsapp.com/G0Nt2u8oFljAoQIk2Ts80T?s=cl&p=a&ilr=1" target="_blank" class="btn btn-gold nav-btn">Entrar no Grupo</a>
+    </nav>
+
+    <header class="page-header">
+        <h1>Central de Calculadoras</h1>
+        <p>Simule, planeje e projete seus resultados com precisão.</p>
+    </header>
+
+    <section class="container flex-layout">
+        
+        <div class="calc-card glass-card">
+            <div class="calc-header">
+                <h2>📈 Juros Compostos</h2>
+                <p>Projeção de crescimento de capital ao longo do tempo.</p>
+            </div>
+            <div class="calc-body">
+                <div class="input-group">
+                    <label>Valor Inicial (R$):</label>
+                    <input type="number" id="initial" value="1000">
+                </div>
+                <div class="input-group">
+                    <label>Aporte Mensal (R$):</label>
+                    <input type="number" id="monthly" value="200">
+                </div>
+                <div class="input-group">
+                    <label>Taxa de Juros ao Ano (%):</label>
+                    <input type="number" id="rate" value="10">
+                </div>
+                <div class="input-group">
+                    <label>Tempo (Anos):</label>
+                    <input type="number" id="years" value="5">
+                </div>
+                <button onclick="calculateCompoundInterest()" class="btn btn-primary full-width">Calcular Projeção</button>
+            </div>
+            <div id="resultCompound" class="result-box">
+                <p class="placeholder-text">Preencha os dados e clique em calcular.</p>
+            </div>
+        </div>
+
+        <div class="calc-card glass-card">
+            <div class="calc-header">
+                <h2>🛡️ Reserva de Emergência</h2>
+                <p>Descubra o valor ideal para sua segurança financeira.</p>
+            </div>
+            <div class="calc-body">
+                <div class="input-group">
+                    <label>Custo de Vida Mensal (R$):</label>
+                    <input type="number" id="monthlyCost" value="2500">
+                </div>
+                <div class="input-group">
+                    <label>Cobertura Desejada (Meses):</label>
+                    <select id="monthsCoverage">
+                        <option value="3">3 Meses (CLT com estabilidade)</option>
+                        <option value="6" selected>6 Meses (Recomendado Padrão)</option>
+                        <option value="12">12 Meses (Autônomo / Empreendedor)</option>
+                    </select>
+                </div>
+                <button onclick="calculateEmergencyFund()" class="btn btn-gold full-width">Calcular Reserva</button>
+            </div>
+            <div id="resultEmergency" class="result-box">
+                <p class="placeholder-text">Preencha os dados e clique em calcular.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2026 Math Finanças. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
